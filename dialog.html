@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <dialog> element:
+        - Represents a native dialog box / popup.
+        - When rendered with the "open" attribute it is visible.
+        - Two usage modes:
+            - Non-modal: inserted in DOM with open (like here) or shown with dialog.show().
+            - Modal: shown with dialog.showModal() — prevents interaction with the page behind it.
+        - Methods:
+            - dialog.show(): displays non-modal dialog.
+            - dialog.showModal(): displays modal dialog (blocks background interaction).
+            - dialog.close([returnValue]): closes the dialog and optionally sets returnValue.
+        - Events:
+            - "close": fires after dialog.close().
+            - "cancel": fires when the user hits Esc (can be prevented).
+        - Accessibility & best practices:
+            - Provide a visible close control (button) that calls dialog.close().
+            - Manage focus: move focus into the dialog when opened and return focus after close.
+            - Use aria attributes when necessary; include meaningful content and keyboard controls.
+            - Some older browsers lack native support — consider a polyfill if you need wide compatibility.
+        - Example improvements: add a close button and use script to show/modal and handle return values.
+    -->
+    <dialog open>
+        hi hello everyone
+    </dialog>
+</body>
+</html>

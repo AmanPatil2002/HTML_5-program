@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio tag</title>
+</head>
+<body>
+    <!--
+        <audio> element:
+        - src: path to the audio file. Prefer using <source> elements with multiple formats (mp3, m4a, ogg) for broader browser support.
+        - controls: show browser's play/pause/seek UI.
+        - loop: replay automatically when finished.
+        - autoplay: attempt to start playback automatically (most browsers block autoplay unless muted).
+        - muted: audio is silenced (often required for autoplay to work).
+        - Fallback content (text or links) should be provided for browsers that don't support <audio>.
+    -->
+    <audio src="assets/Armaan_Malik_-_Control_(Official_Video)(128k).m4a"
+           controls
+           loop
+           autoplay
+           muted>
+        <!-- Fallback and accessibility: offer a direct link and brief description -->
+        Your browser does not support the audio element.
+        <a href="assets/Armaan_Malik_-_Control_(Official_Video)(128k).m4a" download>Download audio</a>
+    </audio>
+
+    <!-- Recommended alternative (multiple sources for compatibility):
+    <audio controls loop autoplay muted>
+        <source src="assets/audio.mp3" type="audio/mpeg">
+        <source src="assets/audio.m4a" type="audio/mp4">
+        <source src="assets/audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+    -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <video> element:
+        - Embeds a media player for video playback.
+        - Attributes used here:
+          - src="assets/song.mp4": URL/path to the video file (works, but prefer <source> elements for multiple formats).
+          - controls: shows the browser's built-in play/pause/seek UI.
+          - autoplay: attempts to start playback automatically (most browsers block autoplay unless the video is muted).
+          - loop: restarts playback when the video ends.
+          - muted: silences audio (often required for autoplay to work).
+          - width / height: sets display size (CSS is often better for responsive layouts).
+        - Notes & best practices:
+          - The type attribute does not belong on the <video> tag — use <source src="..." type="video/mp4"> inside <video>.
+          - Provide multiple <source> elements (mp4, webm, ogv) for broader browser support.
+          - Include <track kind="captions"> for accessibility (subtitles).
+          - Provide fallback content for browsers that don't support <video>.
+          - Avoid forcing autoplay with sound — prefer user-initiated playback for accessibility.
+    -->
+    <video src="assets/song.mp4" controls autoplay loop muted width="500" height="500">
+        Your browser does not support the video tag.
+        <!-- Better pattern:
+        <video controls loop muted width="500" height="500">
+            <source src="assets/song.mp4" type="video/mp4">
+            <source src="assets/song.webm" type="video/webm">
+            <track kind="captions" srclang="en" src="assets/captions.vtt" label="English">
+            Your browser does not support the video tag.
+        </video>
+        -->
+    </video>
+</body>
+</html>

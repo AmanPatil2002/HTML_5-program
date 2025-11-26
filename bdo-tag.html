@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bdo tag</title>
+</head>
+<body>
+    <!--
+        <bdo> (Bidirectional Override):
+        - Overrides the current bidirectional algorithm for its contents.
+        - Use the dir attribute to force text direction:
+            - dir="ltr"  → left-to-right
+            - dir="rtl"  → right-to-left
+        - Useful when embedding text in a different direction (e.g., inserting Arabic/Hebrew into an LTR page).
+        - Prefer CSS (direction + unicode-bidi) for larger blocks; use <bdo> for small, explicit overrides.
+        - Note: dir="rt1" in the original file is invalid; it should be "rtl" or "ltr".
+    -->
+    <p>hello world <bdo dir="rtl">HELLO WORLD</bdo></p> <!-- corrected: dir="rtl" forces right-to-left rendering -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <details>
+        - Semantic widget that creates a disclosure/expandable region.
+        - By default it is collapsed; clicking the <summary> toggles it open/closed.
+        - Use the "open" attribute to render it expanded by default: <details open>
+        - Contents inside <details> remain accessible to assistive tech; screen readers announce the toggle.
+        - Keyboard: <summary> is focusable and can be toggled with Enter/Space.
+        - Degrades gracefully in very old browsers (they simply show the content).
+        - Use for FAQs, progressive disclosure, or small optional content blocks.
+    -->
+    <details>
+        <!--
+            <summary>:
+            - Acts as the visible label and toggle for the details content.
+            - Should be concise and descriptive so users know what will be revealed.
+            - You can include inline markup (icons, text) but keep it accessible.
+        -->
+        <summary>Copyright Information here</summary>
+
+        <!--
+            Content revealed when the <details> is open.
+            Put full paragraphs, lists, links, or other markup here.
+        -->
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt distinctio temporibus doloribus accusamus hic porro quibusdam a natus doloremque magni, ab nemo corrupti sint, laudantium saepe quis voluptatum placeat est eius dolorum? Enim, architecto.</p>
+    </details>
+</body>
+</html>
